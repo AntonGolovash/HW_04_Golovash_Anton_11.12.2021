@@ -91,6 +91,7 @@ Vector<T> Vector<T>::sort()
 	T* temp = new T[1];
 	for (int i = 0; i < _size; i++)
 	{
+		vectorIsSorted = true;
 		for (int j = 0; j < _size-1; j++)
 		{
 			if (_data[j] > _data[j+1] && j+1)
@@ -99,10 +100,6 @@ Vector<T> Vector<T>::sort()
 				*temp = _data[j];
 				_data[j] = _data[j + 1];
 				_data[j + 1] = *temp;
-			}
-			else if (_data[j] < _data[j + 1])
-			{
-				vectorIsSorted = true;
 			}
 		}
 	}
