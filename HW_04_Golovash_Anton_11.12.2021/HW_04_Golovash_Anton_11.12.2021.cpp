@@ -36,6 +36,5 @@ int main()
 	//vector.pop_back();
 	cout << vector << endl;
 	cout << vector.sort() << endl;
-
 }
 

@@ -89,21 +89,21 @@ Vector<T> Vector<T>::sort()
 {
 	bool vectorIsSorted = false;
 	T* temp = new T[1];
-	for (int i = 0; i < _size; i++)
+	while (!vectorIsSorted)
 	{
 		vectorIsSorted = true;
-		for (int j = 0; j < _size-1; j++)
+		for (int i = 0; i < _size-1; i++)
 		{
-			if (_data[j] > _data[j+1] && j+1)
+			if (_data[i] > _data[i+1] && i+1)
 			{
 				vectorIsSorted = false;
-				*temp = _data[j];
-				_data[j] = _data[j + 1];
-				_data[j + 1] = *temp;
+				*temp = _data[i];
+				_data[i] = _data[i + 1];
+				_data[i + 1] = *temp;
 			}
 		}
 	}
-	return Vector<T>();
+	return *this;
 }
 
 template<typename T>
