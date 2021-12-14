@@ -89,18 +89,18 @@ Vector<T> Vector<T>::sort()
 {
 	bool vectorIsSorted = false;
 	T* temp = new T[1];
-	while (!vectorIsSorted)
+	for (int i = 0; i < _size; i++)
 	{
-		for (int i = 0; i < _size-1; i++)
+		for (int j = 0; j < _size-1; j++)
 		{
-			if (_data[i] > _data[i+1] && i+1)
+			if (_data[j] > _data[j+1] && j+1)
 			{
 				vectorIsSorted = false;
-				*temp = _data[i];
-				_data[i] = _data[i + 1];
-				_data[i + 1] = *temp;
+				*temp = _data[j];
+				_data[j] = _data[j + 1];
+				_data[j + 1] = *temp;
 			}
-			else if (_data[i] < _data[i + 1])
+			else if (_data[j] < _data[j + 1])
 			{
 				vectorIsSorted = true;
 			}
