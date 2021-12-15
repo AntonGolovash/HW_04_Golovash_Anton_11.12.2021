@@ -2,8 +2,13 @@
 
 User::User(int Id, string Name, string Surname, string PhoneNumber)
 {
-	_Id = Id;
+	_Id = ++Id;
 	_Name = Name;
 	_Surname = Surname;
 	_PhoneNumber = PhoneNumber;
+}
+
+int User::getId()
+{
+	return _Id;
 }

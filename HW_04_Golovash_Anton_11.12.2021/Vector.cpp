@@ -1,9 +1,4 @@
 #include "Vector.h"
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <ostream>
-using namespace std;
 
 template<typename T>
 Vector<T>::Vector() : _data(nullptr), _size(0)
@@ -12,7 +7,7 @@ Vector<T>::Vector() : _data(nullptr), _size(0)
 }
 
 template<typename T>
-Vector<T>::Vector(const Vector& otherVector)// конструктор копирования
+Vector<T>::Vector(const Vector& otherVector)// конструктор копирования вектора
 {
 	cout << "Constructor copy:\t" << this << endl;
 
@@ -26,7 +21,7 @@ Vector<T>::Vector(const Vector& otherVector)// конструктор копирования
 }
 
 template<typename T>
-Vector<T>::Vector(Vector&& other) : _data(nullptr), _size(0)// конструктор перемещения
+Vector<T>::Vector(Vector&& other) : _data(nullptr), _size(0)// конструктор перемещения вектора
 {
 	_data = other._data;
 	_size = other._size;
@@ -48,9 +43,8 @@ Vector<T>::~Vector()
 	}
 }
 
-// оператор копирования
 template<typename T>
-Vector<T>& Vector<T>::operator=(const Vector& rightVector)
+Vector<T>& Vector<T>::operator=(const Vector& rightVector)// оператор копирования вектора
 {
 	if (this == &rightVector)
 		return *this;
@@ -68,9 +62,8 @@ Vector<T>& Vector<T>::operator=(const Vector& rightVector)
 	return *this;
 }
 
-// оператор перемещения
 template<typename T>
-Vector<T>& Vector<T>::operator=(Vector&& other)
+Vector<T>& Vector<T>::operator=(Vector&& other)// оператор перемещения вектора
 {
 	cout << "operator= assignment:\t" << this << endl;
 	delete[] _data;
@@ -85,7 +78,7 @@ Vector<T>& Vector<T>::operator=(Vector&& other)
 }
 
 template<typename T>
-Vector<T> Vector<T>::sort()
+Vector<T> Vector<T>::sort()// сортировка вектора по возрастанию 
 {
 	bool vectorIsSorted = false;
 	T* temp = new T[1];
@@ -113,7 +106,7 @@ Vector<T> Vector<T>::sort(Vector<T> vector)
 }
 
 template<typename T>
-void Vector<T>::pop_back()
+void Vector<T>::pop_back()// удаление последнего элемента вектора
 {
 	if (_data != nullptr && _size > 0)
 	{
@@ -138,7 +131,7 @@ void Vector<T>::pop_back()
 }
 
 template<typename T>
-void Vector<T>::push_back(T item)
+void Vector<T>::push_back(T item)// добавление элемента в конец вектора
 {
 	if (_data != nullptr && _size > 0)
 	{
@@ -175,7 +168,7 @@ int Vector<T>::size()
 }
 
 template<typename T>
-ostream& operator<< (ostream& out, const Vector<T>& vector)
+ostream& operator<< (ostream& out, const Vector<T>& vector)// вывод в консоль
 {
 	for (size_t i = 0; i < vector._size; i++)
 	{
