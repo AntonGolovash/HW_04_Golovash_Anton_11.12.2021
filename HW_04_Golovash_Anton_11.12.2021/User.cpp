@@ -1,8 +1,17 @@
 #include "User.h"
 
-User::User(int Id, string Name, string Surname, string PhoneNumber)
+User::User()
 {
-	_Id = ++Id;
+	_Id += 10;
+	_Name = "Name";
+	_Surname = "Surname";
+	_PhoneNumber = "PhoneNumber";
+
+}
+
+User::User(string Name, string Surname, string PhoneNumber)
+{
+	_Id += 10;
 	_Name = Name;
 	_Surname = Surname;
 	_PhoneNumber = PhoneNumber;

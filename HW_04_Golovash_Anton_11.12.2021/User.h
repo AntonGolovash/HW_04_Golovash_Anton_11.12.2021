@@ -9,12 +9,14 @@ class User
 {
 
 public:
-	User(int Id, string Name, string Surname, string PhoneNumber);
+	static int _Id;
+	User();
+	User(string Name, string Surname, string PhoneNumber);
 	int getId();
 private:
-	static int _Id;
 	string _Name;
 	string _Surname;
 	string _PhoneNumber;
 };
 
+int User::_Id = 10;

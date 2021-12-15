@@ -4,6 +4,11 @@
 #include <ostream>
 #include "Vector.h"
 #include "Vector.cpp"
+#include "User.h"
+#include "User.cpp"
+#include "DataBaseVector.h"
+#include "DataBaseVector.cpp"
+
 using namespace std;
 
 
@@ -36,5 +41,11 @@ int main()
 	//vector.pop_back();
 	cout << vector << endl;
 	cout << vector.sort() << endl;
+
+	//User user1("Ivan", "Ivanov", "123345985623");
+
+	//DataBaseVector<User> DBVector;
+	//DBVector.AddToVector(user1);
+	//cout << "User " << user1.getId() << endl;
 }
 

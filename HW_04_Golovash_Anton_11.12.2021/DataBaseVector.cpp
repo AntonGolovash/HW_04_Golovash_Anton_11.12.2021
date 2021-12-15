@@ -33,7 +33,7 @@ void DataBaseVector<T>::AddToVector(T object)
 	{
 		_size = 1;
 		_data = new T[_size];
-		_data[0] = item;
+		_data[0] = object;
 	}
 }
 
@@ -51,9 +51,9 @@ DataBaseVector<T>::~DataBaseVector()
 template<typename T>
 ostream& operator<< (ostream& out, const DataBaseVector<T>& object)
 {
-	for (size_t i = 0; i < vector._size; i++)
+	for (size_t i = 0; i < object._size; i++)
 	{
-		out << to_string(vector._data[i]) << "\t";
+		out << to_string(object._data[i]) << "\t";
 	}
 	return out;
 }
