@@ -41,7 +41,6 @@ int main()
 	//vector.pop_back();
 	cout << vector << endl;
 	cout << vector.sort() << endl;
-
 	//User user1("Ivan", "Ivanov", "123345985623");
 
 	//DataBaseVector<User> DBVector;

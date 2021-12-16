@@ -18,5 +18,3 @@ private:
 	string _Surname;
 	string _PhoneNumber;
 };
-
-int User::_Id = 10;
