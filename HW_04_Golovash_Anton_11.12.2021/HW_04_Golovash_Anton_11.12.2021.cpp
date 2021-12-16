@@ -8,15 +8,16 @@
 #include "User.cpp"
 #include "DataBaseVector.h"
 #include "DataBaseVector.cpp"
-
 using namespace std;
-
 
 template<typename T>
 int GetVectorSize(T& collection)
 {
 	return collection.size();
 }
+
+int User::Id = 10;
+
 int main()
 {
 	Vector<int> vector;
@@ -41,10 +42,9 @@ int main()
 	//vector.pop_back();
 	cout << vector << endl;
 	cout << vector.sort() << endl;
-	//User user1("Ivan", "Ivanov", "123345985623");
-
-	//DataBaseVector<User> DBVector;
-	//DBVector.AddToVector(user1);
-	//cout << "User " << user1.getId() << endl;
+	User user1("Ivan", "Ivanov", "123345985623");
+	DataBaseVector<User> DBVector;
+	DBVector.AddToVector(user1);
+	cout << "User " << user1.getId() << endl;
 }
 

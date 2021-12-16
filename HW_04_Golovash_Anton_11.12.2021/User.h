@@ -9,7 +9,7 @@ class User
 {
 
 public:
-	static int _Id;
+	static int Id;
 	User();
 	User(string Name, string Surname, string PhoneNumber);
 	int getId();

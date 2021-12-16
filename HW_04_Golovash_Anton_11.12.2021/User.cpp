@@ -1,24 +1,22 @@
 #include "User.h"
 
-User::User()
+inline User::User()
 {
-	_Id += 10;
+	Id += 10;
 	_Name = "Name";
 	_Surname = "Surname";
 	_PhoneNumber = "PhoneNumber";
 }
 
-User::User(string Name, string Surname, string PhoneNumber)
+inline User::User(string Name, string Surname, string PhoneNumber)
 {
-	_Id += 10;
+	Id += 10;
 	_Name = Name;
 	_Surname = Surname;
 	_PhoneNumber = PhoneNumber;
 }
 
-int User::getId()
+inline int User::getId()
 {
-	return _Id;
+	return Id;
 }
-
-int User::_Id = 10;
