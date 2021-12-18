@@ -16,7 +16,7 @@ int GetVectorSize(T& collection)
 	return collection.size();
 }
 
-int User::Id = 10;
+int User::_Id = 10;
 
 int main()
 {
@@ -32,19 +32,11 @@ int main()
 	vector.push_back(7);
 	vector.push_back(10);
 
-
-	//cout << vector << endl;
-	//Vector<int> vector2 = { move(vector) };
-	//cout << vector2 << endl;
-	//cout << vector << endl;
-	//vector = move(vector2);
-	//vector.pop_back();
-	//vector.pop_back();
 	cout << vector << endl;
 	cout << vector.sort() << endl;
 	User user1("Ivan", "Ivanov", "123345985623");
+	cout << user1 << endl;
 	DataBaseVector<User> DBVector;
 	DBVector.AddToVector(user1);
-	cout << "User " << user1.getId() << endl;
 }
 

@@ -9,11 +9,15 @@ class User
 {
 
 public:
-	static int Id;
 	User();
 	User(string Name, string Surname, string PhoneNumber);
 	int getId();
+	string getName();
+	string getSurName();
+	string getPhoneNumber();
+	friend ostream& operator<< (ostream& out, const User& object);
 private:
+	static int _Id;
 	string _Name;
 	string _Surname;
 	string _PhoneNumber;

@@ -2,7 +2,7 @@
 
 inline User::User()
 {
-	Id += 10;
+	_Id += 10;
 	_Name = "Name";
 	_Surname = "Surname";
 	_PhoneNumber = "PhoneNumber";
@@ -10,7 +10,7 @@ inline User::User()
 
 inline User::User(string Name, string Surname, string PhoneNumber)
 {
-	Id += 10;
+	_Id += 10;
 	_Name = Name;
 	_Surname = Surname;
 	_PhoneNumber = PhoneNumber;
@@ -18,5 +18,29 @@ inline User::User(string Name, string Surname, string PhoneNumber)
 
 inline int User::getId()
 {
-	return Id;
+	return _Id;
+}
+
+inline string User::getName()
+{
+	return _Name;
+}
+
+inline string User::getSurName()
+{
+	return _Surname;
+}
+
+inline string User::getPhoneNumber()
+{
+	return _PhoneNumber;
+}
+
+inline ostream& operator<<(User& object, ostream& out)
+{
+	out << to_string(object.getId()) << endl;
+	out	<< (object.getName()) << endl;
+	out << (object.getSurName()) << endl;
+	out << (object.getPhoneNumber()) << endl;
+	return out;
 }
