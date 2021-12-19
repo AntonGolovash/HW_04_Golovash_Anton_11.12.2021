@@ -15,7 +15,7 @@ public:
 	string getName();
 	string getSurName();
 	string getPhoneNumber();
-	friend ostream& operator<< (ostream& out, const User& object);
+	string ToString();
 private:
 	static int _Id;
 	string _Name;

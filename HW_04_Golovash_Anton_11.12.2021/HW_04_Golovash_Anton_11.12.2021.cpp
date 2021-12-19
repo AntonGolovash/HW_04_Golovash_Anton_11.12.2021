@@ -35,7 +35,7 @@ int main()
 	cout << vector << endl;
 	cout << vector.sort() << endl;
 	User user1("Ivan", "Ivanov", "123345985623");
-	cout << user1 << endl;
+	user1.ToString();
 	DataBaseVector<User> DBVector;
 	DBVector.AddToVector(user1);
 }

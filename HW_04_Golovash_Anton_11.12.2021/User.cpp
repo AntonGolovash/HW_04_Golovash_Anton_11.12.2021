@@ -44,3 +44,14 @@ inline ostream& operator<<(User& object, ostream& out)
 	out << (object.getPhoneNumber()) << endl;
 	return out;
 }
+
+string User::ToString()
+{
+	stringstream ss;
+	ss << User::getId() << endl;
+	ss << User::getName() << endl;
+	ss << User::getSurName() << endl;
+	ss << User::getPhoneNumber() << endl;
+
+	return ss.str();
+}
