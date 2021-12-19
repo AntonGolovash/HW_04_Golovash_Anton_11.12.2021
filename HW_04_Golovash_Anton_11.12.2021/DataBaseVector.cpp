@@ -11,9 +11,10 @@ void DataBaseVector<T>::AddToVector(T object)
 {
 	if (_data != nullptr && _size > 0)
 	{
-		T* temp = new T[++_size];
-
-		for (size_t i = 0; i < _size - 1; i++)
+		_size++;
+		T* temp = new T[_size];
+		_size--;
+		for (size_t i = 0; i < _size; i++)
 		{
 			temp[i] = _data[i];
 		}
